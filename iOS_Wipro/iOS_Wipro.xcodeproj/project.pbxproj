@@ -1,0 +1,583 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		4967B19120F356A40034D466 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4967B19020F356A40034D466 /* AppDelegate.swift */; };
+		4967B19320F356A40034D466 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4967B19220F356A40034D466 /* ViewController.swift */; };
+		4967B19820F356A50034D466 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4967B19720F356A50034D466 /* Assets.xcassets */; };
+		4967B19B20F356A50034D466 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4967B19920F356A50034D466 /* LaunchScreen.storyboard */; };
+		4967B1A620F356A50034D466 /* iOS_WiproTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4967B1A520F356A50034D466 /* iOS_WiproTests.swift */; };
+		4967B1B120F356A50034D466 /* iOS_WiproUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4967B1B020F356A50034D466 /* iOS_WiproUITests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		4967B1A220F356A50034D466 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 4967B18520F356A40034D466 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 4967B18C20F356A40034D466;
+			remoteInfo = iOS_Wipro;
+		};
+		4967B1AD20F356A50034D466 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 4967B18520F356A40034D466 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 4967B18C20F356A40034D466;
+			remoteInfo = iOS_Wipro;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		4967B18D20F356A40034D466 /* iOS_Wipro.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iOS_Wipro.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		4967B19020F356A40034D466 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		4967B19220F356A40034D466 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		4967B19720F356A50034D466 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		4967B19A20F356A50034D466 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		4967B19C20F356A50034D466 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		4967B1A120F356A50034D466 /* iOS_WiproTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = iOS_WiproTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		4967B1A520F356A50034D466 /* iOS_WiproTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = iOS_WiproTests.swift; sourceTree = "<group>"; };
+		4967B1A720F356A50034D466 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		4967B1AC20F356A50034D466 /* iOS_WiproUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = iOS_WiproUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		4967B1B020F356A50034D466 /* iOS_WiproUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = iOS_WiproUITests.swift; sourceTree = "<group>"; };
+		4967B1B220F356A50034D466 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		4967B18A20F356A40034D466 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4967B19E20F356A50034D466 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4967B1A920F356A50034D466 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		4967B18420F356A40034D466 = {
+			isa = PBXGroup;
+			children = (
+				4967B18F20F356A40034D466 /* iOS_Wipro */,
+				4967B1A420F356A50034D466 /* iOS_WiproTests */,
+				4967B1AF20F356A50034D466 /* iOS_WiproUITests */,
+				4967B18E20F356A40034D466 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		4967B18E20F356A40034D466 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				4967B18D20F356A40034D466 /* iOS_Wipro.app */,
+				4967B1A120F356A50034D466 /* iOS_WiproTests.xctest */,
+				4967B1AC20F356A50034D466 /* iOS_WiproUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		4967B18F20F356A40034D466 /* iOS_Wipro */ = {
+			isa = PBXGroup;
+			children = (
+				4967B19020F356A40034D466 /* AppDelegate.swift */,
+				4967B19220F356A40034D466 /* ViewController.swift */,
+				4967B19720F356A50034D466 /* Assets.xcassets */,
+				4967B19920F356A50034D466 /* LaunchScreen.storyboard */,
+				4967B19C20F356A50034D466 /* Info.plist */,
+			);
+			path = iOS_Wipro;
+			sourceTree = "<group>";
+		};
+		4967B1A420F356A50034D466 /* iOS_WiproTests */ = {
+			isa = PBXGroup;
+			children = (
+				4967B1A520F356A50034D466 /* iOS_WiproTests.swift */,
+				4967B1A720F356A50034D466 /* Info.plist */,
+			);
+			path = iOS_WiproTests;
+			sourceTree = "<group>";
+		};
+		4967B1AF20F356A50034D466 /* iOS_WiproUITests */ = {
+			isa = PBXGroup;
+			children = (
+				4967B1B020F356A50034D466 /* iOS_WiproUITests.swift */,
+				4967B1B220F356A50034D466 /* Info.plist */,
+			);
+			path = iOS_WiproUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		4967B18C20F356A40034D466 /* iOS_Wipro */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 4967B1B520F356A50034D466 /* Build configuration list for PBXNativeTarget "iOS_Wipro" */;
+			buildPhases = (
+				4967B18920F356A40034D466 /* Sources */,
+				4967B18A20F356A40034D466 /* Frameworks */,
+				4967B18B20F356A40034D466 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = iOS_Wipro;
+			productName = iOS_Wipro;
+			productReference = 4967B18D20F356A40034D466 /* iOS_Wipro.app */;
+			productType = "com.apple.product-type.application";
+		};
+		4967B1A020F356A50034D466 /* iOS_WiproTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 4967B1B820F356A50034D466 /* Build configuration list for PBXNativeTarget "iOS_WiproTests" */;
+			buildPhases = (
+				4967B19D20F356A50034D466 /* Sources */,
+				4967B19E20F356A50034D466 /* Frameworks */,
+				4967B19F20F356A50034D466 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				4967B1A320F356A50034D466 /* PBXTargetDependency */,
+			);
+			name = iOS_WiproTests;
+			productName = iOS_WiproTests;
+			productReference = 4967B1A120F356A50034D466 /* iOS_WiproTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		4967B1AB20F356A50034D466 /* iOS_WiproUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 4967B1BB20F356A50034D466 /* Build configuration list for PBXNativeTarget "iOS_WiproUITests" */;
+			buildPhases = (
+				4967B1A820F356A50034D466 /* Sources */,
+				4967B1A920F356A50034D466 /* Frameworks */,
+				4967B1AA20F356A50034D466 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				4967B1AE20F356A50034D466 /* PBXTargetDependency */,
+			);
+			name = iOS_WiproUITests;
+			productName = iOS_WiproUITests;
+			productReference = 4967B1AC20F356A50034D466 /* iOS_WiproUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		4967B18520F356A40034D466 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0940;
+				LastUpgradeCheck = 0940;
+				ORGANIZATIONNAME = Shital;
+				TargetAttributes = {
+					4967B18C20F356A40034D466 = {
+						CreatedOnToolsVersion = 9.4.1;
+					};
+					4967B1A020F356A50034D466 = {
+						CreatedOnToolsVersion = 9.4.1;
+						TestTargetID = 4967B18C20F356A40034D466;
+					};
+					4967B1AB20F356A50034D466 = {
+						CreatedOnToolsVersion = 9.4.1;
+						TestTargetID = 4967B18C20F356A40034D466;
+					};
+				};
+			};
+			buildConfigurationList = 4967B18820F356A40034D466 /* Build configuration list for PBXProject "iOS_Wipro" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 4967B18420F356A40034D466;
+			productRefGroup = 4967B18E20F356A40034D466 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				4967B18C20F356A40034D466 /* iOS_Wipro */,
+				4967B1A020F356A50034D466 /* iOS_WiproTests */,
+				4967B1AB20F356A50034D466 /* iOS_WiproUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		4967B18B20F356A40034D466 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4967B19B20F356A50034D466 /* LaunchScreen.storyboard in Resources */,
+				4967B19820F356A50034D466 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4967B19F20F356A50034D466 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4967B1AA20F356A50034D466 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		4967B18920F356A40034D466 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4967B19320F356A40034D466 /* ViewController.swift in Sources */,
+				4967B19120F356A40034D466 /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4967B19D20F356A50034D466 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4967B1A620F356A50034D466 /* iOS_WiproTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4967B1A820F356A50034D466 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4967B1B120F356A50034D466 /* iOS_WiproUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		4967B1A320F356A50034D466 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 4967B18C20F356A40034D466 /* iOS_Wipro */;
+			targetProxy = 4967B1A220F356A50034D466 /* PBXContainerItemProxy */;
+		};
+		4967B1AE20F356A50034D466 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 4967B18C20F356A40034D466 /* iOS_Wipro */;
+			targetProxy = 4967B1AD20F356A50034D466 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		4967B19920F356A50034D466 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				4967B19A20F356A50034D466 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		4967B1B320F356A50034D466 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.4;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		4967B1B420F356A50034D466 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.4;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		4967B1B620F356A50034D466 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 9PJT9583SS;
+				INFOPLIST_FILE = iOS_Wipro/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.ios.wipro.iOS-Wipro";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		4967B1B720F356A50034D466 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 9PJT9583SS;
+				INFOPLIST_FILE = iOS_Wipro/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.ios.wipro.iOS-Wipro";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		4967B1B920F356A50034D466 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 9PJT9583SS;
+				INFOPLIST_FILE = iOS_WiproTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.ios.wipro.iOS-WiproTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/iOS_Wipro.app/iOS_Wipro";
+			};
+			name = Debug;
+		};
+		4967B1BA20F356A50034D466 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 9PJT9583SS;
+				INFOPLIST_FILE = iOS_WiproTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.ios.wipro.iOS-WiproTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/iOS_Wipro.app/iOS_Wipro";
+			};
+			name = Release;
+		};
+		4967B1BC20F356A50034D466 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 9PJT9583SS;
+				INFOPLIST_FILE = iOS_WiproUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.ios.wipro.iOS-WiproUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = iOS_Wipro;
+			};
+			name = Debug;
+		};
+		4967B1BD20F356A50034D466 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 9PJT9583SS;
+				INFOPLIST_FILE = iOS_WiproUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.ios.wipro.iOS-WiproUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = iOS_Wipro;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		4967B18820F356A40034D466 /* Build configuration list for PBXProject "iOS_Wipro" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4967B1B320F356A50034D466 /* Debug */,
+				4967B1B420F356A50034D466 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		4967B1B520F356A50034D466 /* Build configuration list for PBXNativeTarget "iOS_Wipro" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4967B1B620F356A50034D466 /* Debug */,
+				4967B1B720F356A50034D466 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		4967B1B820F356A50034D466 /* Build configuration list for PBXNativeTarget "iOS_WiproTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4967B1B920F356A50034D466 /* Debug */,
+				4967B1BA20F356A50034D466 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		4967B1BB20F356A50034D466 /* Build configuration list for PBXNativeTarget "iOS_WiproUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4967B1BC20F356A50034D466 /* Debug */,
+				4967B1BD20F356A50034D466 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 4967B18520F356A40034D466 /* Project object */;
+}
