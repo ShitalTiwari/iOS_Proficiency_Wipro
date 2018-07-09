@@ -22,8 +22,12 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         //Creating Initial View Controller as first view controller to display
         let initialViewController = ViewController()
         
+        //Setting navigation controller
+        let navigationController = UINavigationController(rootViewController: initialViewController)
+        navigationController.navigationBar.isTranslucent = false
+        
         //Setting root view controller for main navigation controller
-        window!.rootViewController = initialViewController
+        window!.rootViewController = navigationController
         window?.makeKeyAndVisible()
         
         return true
