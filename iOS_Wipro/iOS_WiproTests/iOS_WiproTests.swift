@@ -32,4 +32,23 @@ class iOS_WiproTests: XCTestCase {
             // Put the code you want to measure the time of here.
         }
     }
+    
+    func testGitUserData() {
+        guard let gitUrl = URL(string: "https://dl.dropboxusercontent.com/s/2iodh4vg0eortkl/facts.json") else { return }
+        let promise = expectation(description: "Simple Request")
+        URLSession.shared.dataTask(with: gitUrl) { (data, response
+            , error) in
+            guard let data = data else { return }
+            do {
+                let json = try JSONSerialization.jsonObject(with: data, options: JSONSerialization.ReadingOptions.mutableContainers)
+                if let result = json as? NSDictionary {
+                    XCTAssertTrue(result["title"] as! String != "")
+                    promise.fulfill()
+                }
+            } catch let err {
+                print("Err", err)
+            }
+            }.resume()
+        waitForExpectations(timeout: 5, handler: nil)
+    }
 }
