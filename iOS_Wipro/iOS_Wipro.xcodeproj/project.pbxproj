@@ -7,15 +7,18 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3A1807422DF83C553B03B87D /* Pods_iOS_Wipro.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F56E5C781AB1639A8706F8B2 /* Pods_iOS_Wipro.framework */; };
 		4967B19120F356A40034D466 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4967B19020F356A40034D466 /* AppDelegate.swift */; };
-		4967B19320F356A40034D466 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4967B19220F356A40034D466 /* ViewController.swift */; };
 		4967B19820F356A50034D466 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4967B19720F356A50034D466 /* Assets.xcassets */; };
 		4967B19B20F356A50034D466 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4967B19920F356A50034D466 /* LaunchScreen.storyboard */; };
 		4967B1A620F356A50034D466 /* iOS_WiproTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4967B1A520F356A50034D466 /* iOS_WiproTests.swift */; };
 		4967B1B120F356A50034D466 /* iOS_WiproUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4967B1B020F356A50034D466 /* iOS_WiproUITests.swift */; };
-		4967B1D220F378D70034D466 /* ImagesContainerTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4967B1D120F378D70034D466 /* ImagesContainerTableViewCell.xib */; };
-		4967B1D520F378F90034D466 /* ImagesContainerTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4967B1D420F378F90034D466 /* ImagesContainerTableViewCell.swift */; };
-		4967B1D720F37FD80034D466 /* CommonMethods.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4967B1D620F37FD80034D466 /* CommonMethods.swift */; };
+		496E677720F4E6EB005BF1FE /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 496E677420F4E6EB005BF1FE /* Constants.swift */; };
+		496E677820F4E6EB005BF1FE /* APICall.swift in Sources */ = {isa = PBXBuildFile; fileRef = 496E677520F4E6EB005BF1FE /* APICall.swift */; };
+		496E677920F4E6EB005BF1FE /* CommonMethods.swift in Sources */ = {isa = PBXBuildFile; fileRef = 496E677620F4E6EB005BF1FE /* CommonMethods.swift */; };
+		496E677B20F4E6F9005BF1FE /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 496E677A20F4E6F8005BF1FE /* ViewController.swift */; };
+		496E678020F4EC4B005BF1FE /* ImagesContainerTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 496E677E20F4EC4B005BF1FE /* ImagesContainerTableViewCell.xib */; };
+		496E678120F4EC4B005BF1FE /* ImagesContainerTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 496E677F20F4EC4B005BF1FE /* ImagesContainerTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -38,7 +41,6 @@
 /* Begin PBXFileReference section */
 		4967B18D20F356A40034D466 /* iOS_Wipro.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iOS_Wipro.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4967B19020F356A40034D466 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		4967B19220F356A40034D466 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		4967B19720F356A50034D466 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		4967B19A20F356A50034D466 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		4967B19C20F356A50034D466 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -48,9 +50,16 @@
 		4967B1AC20F356A50034D466 /* iOS_WiproUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = iOS_WiproUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		4967B1B020F356A50034D466 /* iOS_WiproUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = iOS_WiproUITests.swift; sourceTree = "<group>"; };
 		4967B1B220F356A50034D466 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		4967B1D120F378D70034D466 /* ImagesContainerTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ImagesContainerTableViewCell.xib; sourceTree = "<group>"; };
-		4967B1D420F378F90034D466 /* ImagesContainerTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImagesContainerTableViewCell.swift; sourceTree = "<group>"; };
-		4967B1D620F37FD80034D466 /* CommonMethods.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommonMethods.swift; sourceTree = "<group>"; };
+		496E677420F4E6EB005BF1FE /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		496E677520F4E6EB005BF1FE /* APICall.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APICall.swift; sourceTree = "<group>"; };
+		496E677620F4E6EB005BF1FE /* CommonMethods.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CommonMethods.swift; sourceTree = "<group>"; };
+		496E677A20F4E6F8005BF1FE /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		496E677C20F4E8BE005BF1FE /* iOS_Wipro-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "iOS_Wipro-Bridging-Header.h"; sourceTree = "<group>"; };
+		496E677E20F4EC4B005BF1FE /* ImagesContainerTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ImagesContainerTableViewCell.xib; sourceTree = "<group>"; };
+		496E677F20F4EC4B005BF1FE /* ImagesContainerTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImagesContainerTableViewCell.swift; sourceTree = "<group>"; };
+		6D268AE6C615CF26AA8B4512 /* Pods-iOS_Wipro.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iOS_Wipro.debug.xcconfig"; path = "Pods/Target Support Files/Pods-iOS_Wipro/Pods-iOS_Wipro.debug.xcconfig"; sourceTree = "<group>"; };
+		F56E5C781AB1639A8706F8B2 /* Pods_iOS_Wipro.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_iOS_Wipro.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		FA27BB65474BDEF032C6C5EB /* Pods-iOS_Wipro.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iOS_Wipro.release.xcconfig"; path = "Pods/Target Support Files/Pods-iOS_Wipro/Pods-iOS_Wipro.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +67,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3A1807422DF83C553B03B87D /* Pods_iOS_Wipro.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -78,13 +88,24 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		36366E2733DE6879FFF9D67E /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				F56E5C781AB1639A8706F8B2 /* Pods_iOS_Wipro.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		4967B18420F356A40034D466 = {
 			isa = PBXGroup;
 			children = (
+				496E677C20F4E8BE005BF1FE /* iOS_Wipro-Bridging-Header.h */,
 				4967B18F20F356A40034D466 /* iOS_Wipro */,
 				4967B1A420F356A50034D466 /* iOS_WiproTests */,
 				4967B1AF20F356A50034D466 /* iOS_WiproUITests */,
 				4967B18E20F356A40034D466 /* Products */,
+				C407E9894A5D9F7D08BCA320 /* Pods */,
+				36366E2733DE6879FFF9D67E /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -101,11 +122,10 @@
 		4967B18F20F356A40034D466 /* iOS_Wipro */ = {
 			isa = PBXGroup;
 			children = (
-				4967B1D020F378C60034D466 /* View */,
-				4967B1CF20F378C00034D466 /* Model */,
-				4967B1CE20F378B60034D466 /* Controller */,
+				496E677D20F4EC37005BF1FE /* ViewModel */,
+				496E677320F4E6DE005BF1FE /* Model */,
+				496E677020F4E6A8005BF1FE /* Controller */,
 				4967B19020F356A40034D466 /* AppDelegate.swift */,
-				4967B19220F356A40034D466 /* ViewController.swift */,
 				4967B19720F356A50034D466 /* Assets.xcassets */,
 				4967B19920F356A50034D466 /* LaunchScreen.storyboard */,
 				4967B19C20F356A50034D466 /* Info.plist */,
@@ -131,36 +151,40 @@
 			path = iOS_WiproUITests;
 			sourceTree = "<group>";
 		};
-		4967B1CE20F378B60034D466 /* Controller */ = {
+		496E677020F4E6A8005BF1FE /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				496E677A20F4E6F8005BF1FE /* ViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
 		};
-		4967B1CF20F378C00034D466 /* Model */ = {
+		496E677320F4E6DE005BF1FE /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				4967B1D320F378DE0034D466 /* Custom TableViewCell */,
-				4967B1D620F37FD80034D466 /* CommonMethods.swift */,
+				496E677520F4E6EB005BF1FE /* APICall.swift */,
+				496E677620F4E6EB005BF1FE /* CommonMethods.swift */,
+				496E677420F4E6EB005BF1FE /* Constants.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
 		};
-		4967B1D020F378C60034D466 /* View */ = {
+		496E677D20F4EC37005BF1FE /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
-				4967B1D120F378D70034D466 /* ImagesContainerTableViewCell.xib */,
+				496E677F20F4EC4B005BF1FE /* ImagesContainerTableViewCell.swift */,
+				496E677E20F4EC4B005BF1FE /* ImagesContainerTableViewCell.xib */,
 			);
-			path = View;
+			path = ViewModel;
 			sourceTree = "<group>";
 		};
-		4967B1D320F378DE0034D466 /* Custom TableViewCell */ = {
+		C407E9894A5D9F7D08BCA320 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				4967B1D420F378F90034D466 /* ImagesContainerTableViewCell.swift */,
+				6D268AE6C615CF26AA8B4512 /* Pods-iOS_Wipro.debug.xcconfig */,
+				FA27BB65474BDEF032C6C5EB /* Pods-iOS_Wipro.release.xcconfig */,
 			);
-			path = "Custom TableViewCell";
+			name = Pods;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -170,9 +194,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 4967B1B520F356A50034D466 /* Build configuration list for PBXNativeTarget "iOS_Wipro" */;
 			buildPhases = (
+				F67692D28B873470CC1B3BDA /* [CP] Check Pods Manifest.lock */,
 				4967B18920F356A40034D466 /* Sources */,
 				4967B18A20F356A40034D466 /* Frameworks */,
 				4967B18B20F356A40034D466 /* Resources */,
+				8543E3C762F933648ACDC3F5 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -268,7 +294,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				4967B19B20F356A50034D466 /* LaunchScreen.storyboard in Resources */,
-				4967B1D220F378D70034D466 /* ImagesContainerTableViewCell.xib in Resources */,
+				496E678020F4EC4B005BF1FE /* ImagesContainerTableViewCell.xib in Resources */,
 				4967B19820F356A50034D466 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -289,15 +315,58 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		8543E3C762F933648ACDC3F5 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-iOS_Wipro/Pods-iOS_Wipro-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/ReachabilitySwift/Reachability.framework",
+				"${BUILT_PRODUCTS_DIR}/SVProgressHUD/SVProgressHUD.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Reachability.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SVProgressHUD.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-iOS_Wipro/Pods-iOS_Wipro-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F67692D28B873470CC1B3BDA /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-iOS_Wipro-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		4967B18920F356A40034D466 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4967B1D520F378F90034D466 /* ImagesContainerTableViewCell.swift in Sources */,
-				4967B19320F356A40034D466 /* ViewController.swift in Sources */,
+				496E677B20F4E6F9005BF1FE /* ViewController.swift in Sources */,
 				4967B19120F356A40034D466 /* AppDelegate.swift in Sources */,
-				4967B1D720F37FD80034D466 /* CommonMethods.swift in Sources */,
+				496E677720F4E6EB005BF1FE /* Constants.swift in Sources */,
+				496E678120F4EC4B005BF1FE /* ImagesContainerTableViewCell.swift in Sources */,
+				496E677820F4E6EB005BF1FE /* APICall.swift in Sources */,
+				496E677920F4E6EB005BF1FE /* CommonMethods.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -460,6 +529,7 @@
 		};
 		4967B1B620F356A50034D466 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 6D268AE6C615CF26AA8B4512 /* Pods-iOS_Wipro.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
@@ -474,6 +544,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "com.ios.wipro.iOS-Wipro";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
+				SWIFT_OBJC_BRIDGING_HEADER = "iOS_Wipro-Bridging-Header.h";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -481,6 +552,7 @@
 		};
 		4967B1B720F356A50034D466 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = FA27BB65474BDEF032C6C5EB /* Pods-iOS_Wipro.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
@@ -495,6 +567,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "com.ios.wipro.iOS-Wipro";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
+				SWIFT_OBJC_BRIDGING_HEADER = "iOS_Wipro-Bridging-Header.h";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};

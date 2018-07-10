@@ -26,4 +26,16 @@ class ImagesContainerTableViewCell: UITableViewCell {
 
         
     }
+    
+    //Method to load cell data
+    func loadCellData(dict: [String: AnyObject]) {
+        if dict[Constants.GlobalConstants.descriptionKey] as? String != nil && dict[Constants.GlobalConstants.titleKey] as? String != nil {
+            if let title = dict[Constants.GlobalConstants.titleKey] as? String {
+                self.lblTitle?.text = title
+            }
+            if let desc = dict[Constants.GlobalConstants.descriptionKey] as? String {
+                self.lblDescription?.text = desc
+            }
+        }
+    }
 }

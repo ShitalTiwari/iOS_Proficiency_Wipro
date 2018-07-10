@@ -2,18 +2,19 @@
 //  ViewController.swift
 //  iOS_Wipro
 //
-//  Created by SierraVista Technologies Pvt Ltd on 09/07/18.
+//  Created by SierraVista Technologies Pvt Ltd on 10/07/18.
 //  Copyright © 2018 Shital. All rights reserved.
 //
 
 import UIKit
+import SVProgressHUD
+import Reachability
 
 class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
 
     var tblImageContainer : UITableView?
     var tableData = [[String: AnyObject]]()
     var loadedImages = [String: UIImage]()
-    let strTableCellIdentifier = "ImagesContainerTableViewCell"
     
     //Pull to refresh
     lazy var refreshControl: UIRefreshControl = {
@@ -36,7 +37,8 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         self.tblImageContainer?.tableFooterView = UIView()
         self.tblImageContainer?.translatesAutoresizingMaskIntoConstraints = false
         self.tblImageContainer?.addSubview(self.refreshControl)
-        self.tblImageContainer?.register(UINib(nibName: self.strTableCellIdentifier, bundle: nil), forCellReuseIdentifier: self.strTableCellIdentifier)
+        self.tblImageContainer?.allowsSelection = false
+        self.tblImageContainer?.register(UINib(nibName: Constants.GlobalConstants.strTableCellIdentifier, bundle: nil), forCellReuseIdentifier: Constants.GlobalConstants.strTableCellIdentifier)
         //Adding table view to view controller as subView
         
         self.view.addSubview(self.tblImageContainer!)
@@ -44,10 +46,13 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         //Adding constraints to table view
         self.view.addConstraints(NSLayoutConstraint.constraints(withVisualFormat: "H:|-0-[tblView]-0-|", options: NSLayoutFormatOptions(rawValue: 0), metrics: nil, views: ["tblView": self.tblImageContainer!]))
         self.view.addConstraints(NSLayoutConstraint.constraints(withVisualFormat: "V:|-0-[tblView]-0-|", options: NSLayoutFormatOptions(rawValue: 0), metrics: nil, views: ["tblView":self.tblImageContainer!]))
-        
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
         self.updatTableData()
     }
-
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
@@ -69,23 +74,18 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         //Creating custom table view cell
         
-        let cell = tableView.dequeueReusableCell(withIdentifier: self.strTableCellIdentifier, for: indexPath) as! ImagesContainerTableViewCell
+        let cell = tableView.dequeueReusableCell(withIdentifier: Constants.GlobalConstants.strTableCellIdentifier, for: indexPath) as! ImagesContainerTableViewCell
         
         cell.lblTitle?.text = ""
         cell.lblDescription?.text = ""
         cell.cellImage?.image = nil
         
         let dict = self.tableData[indexPath.row]
-
-        if dict["description"] as? String != nil && dict["title"] as? String != nil {
-            if let title = dict["title"] as? String {
-                cell.lblTitle?.text = title
-            }
-            if let desc = dict["description"] as? String {
-                cell.lblDescription?.text = desc
-            }
+        cell.loadCellData(dict: dict) //Setting data to cell
+        
+        if dict[Constants.GlobalConstants.descriptionKey] as? String != nil && dict[Constants.GlobalConstants.titleKey] as? String != nil {
             cell.cellImage?.image = nil
-            if let imageURL = dict["imageHref"] as? String {
+            if let imageURL = dict[Constants.GlobalConstants.imageUrlKey] as? String {
                 if loadedImages[imageURL] != nil {
                     cell.cellImage?.image = loadedImages[imageURL]
                 } else {
@@ -100,59 +100,17 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
                 }
             }
         }
+        cell.setNeedsUpdateConstraints()
+        cell.updateConstraintsIfNeeded()
+        
         return cell
-        
-        
     }
     
     //Sending tableviewcell height
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        
-        if self.tableData.count > 0 {
-            let dict = self.tableData[indexPath.row]
-            if dict["description"] as? String != nil {
-                let height = CommonMethods.getCellHeight(text: dict["description"] as! String, width: tableView.bounds.width, font: UIFont.systemFont(ofSize: 17.0))
-                return height + 54 //Adding constant for height of title label and constraints constants
-            } else if dict["title"] as? String != nil {
-                return 54
-            }
-            
-        }
-        return 0
+        return UITableViewAutomaticDimension
     }
-    
-    //This method calls API to download data from url
-    func getAPIDataFromURL(completionHandler: @escaping (_ result: [String:AnyObject])-> Void) {
-        let apiURL = "https://dl.dropboxusercontent.com/s/2iodh4vg0eortkl/facts.json"
-        
-        let callURL = URL(string: apiURL)
-        
-        //Calling session to fetch data from url
-        URLSession.shared.dataTask(with: callURL!) { (data, response, error) in
-            
-            if let dataResponse = data {
-                if let responseString = String(data: dataResponse, encoding: String.Encoding.ascii) {
-                    
-                    if let jsonData = responseString.data(using: String.Encoding.utf8) {
-                        do {
-                            let json = try JSONSerialization.jsonObject(with: jsonData, options: []) as! [String: AnyObject]
-                            
-                            if (json["rows"] as? [[String: AnyObject]]) != nil {
-                                completionHandler(json)
-                            } else {
-                                completionHandler(["Error": "Invalid JSON data" as AnyObject])
-                            }
-                            
-                        } catch {
-                            completionHandler(["Error": error.localizedDescription as AnyObject])
-                        }
-                    }
-                }
-                
-            }
-            }.resume()
-    }
-    
+
     //Method to download images from server and save them in temporary property
     func downloadImage(url: String, callback: @escaping (UIImage?) -> Void) {
         let urlRequest = URLRequest(url: URL(string: url)!)
@@ -165,7 +123,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
                     callback(UIImage(data: dataResponse!))
                 }
             } else {
-                 DispatchQueue.global(qos: .utility).async {
+                DispatchQueue.global(qos: .utility).async {
                     callback(nil)
                 }
             }
@@ -184,23 +142,60 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     
     //Refreshing table data and reloading
     func updatTableData() {
-        self.getAPIDataFromURL { (response) in
-            print(response)
-            if (response["rows"] as? [[String: AnyObject]]) != nil {
-                //Setting Navigation Bar Title
-                
-                self.tableData = (response["rows"] as? [[String: AnyObject]])!
-                DispatchQueue.main.async {
-                    self.title = response["title"] as? String
-                    self.tblImageContainer?.reloadData()
+        SVProgressHUD.show()
+        
+        let checkInternet = Reachability()
+        checkInternet?.whenReachable = { reachability in
+            if reachability.connection == .wifi || reachability.connection == .cellular {
+                checkInternet?.stopNotifier()
+                APICall().getAPIDataFromURL { (response) in
+                    SVProgressHUD.dismiss()
+                    if (response[Constants.GlobalConstants.rowsKey] as? [[String: AnyObject]]) != nil {
+                        //Setting Navigation Bar Title
+                        
+                        self.tableData = (response[Constants.GlobalConstants.rowsKey] as? [[String: AnyObject]])!
+                        DispatchQueue.main.async {
+                            self.title = response[Constants.GlobalConstants.titleKey] as? String
+                            self.tblImageContainer?.reloadData()
+                        }
+                        
+                    } else {
+                        let alert = UIAlertController(title: "ERROR", message: response["Error"] as? String, preferredStyle: UIAlertControllerStyle.actionSheet)
+                        let alertAction = UIAlertAction(title: "Ok", style: .cancel, handler: nil)
+                        alert.addAction(alertAction)
+                    }
                 }
-                
             } else {
-                let alert = UIAlertController(title: "ERROR", message: response["Error"] as? String, preferredStyle: UIAlertControllerStyle.actionSheet)
+                SVProgressHUD.dismiss()
+                checkInternet?.stopNotifier()
+                let alert = UIAlertController(title: "ERROR", message: "No Internet Connection!", preferredStyle: UIAlertControllerStyle.actionSheet)
                 let alertAction = UIAlertAction(title: "Ok", style: .cancel, handler: nil)
                 alert.addAction(alertAction)
             }
+            
+        }
+        
+        checkInternet?.whenUnreachable = { _ in
+            SVProgressHUD.dismiss()
+            checkInternet?.stopNotifier()
+            
+            let alert = UIAlertController(title: "ERROR", message: "No Internet Connection!", preferredStyle: UIAlertControllerStyle.actionSheet)
+            let alertAction = UIAlertAction(title: "Ok", style: .cancel, handler: nil)
+            alert.addAction(alertAction)
+        }
+        
+        do {
+            try checkInternet?.startNotifier()
+        } catch  {
+            SVProgressHUD.dismiss()
+            checkInternet?.stopNotifier()
+            
+            let alert = UIAlertController(title: "ERROR", message: "No Internet Connection!", preferredStyle: UIAlertControllerStyle.actionSheet)
+            let alertAction = UIAlertAction(title: "Ok", style: .cancel, handler: nil)
+            alert.addAction(alertAction)
         }
     }
+
+
 }
 

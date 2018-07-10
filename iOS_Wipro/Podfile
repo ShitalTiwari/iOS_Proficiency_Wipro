@@ -1,0 +1,10 @@
+# Uncomment the next line to define a global platform for your project
+# platform :ios, '9.0'
+
+target 'iOS_Wipro' do
+   use_frameworks!
+  pod 'SVProgressHUD'
+  pod 'ReachabilitySwift'
+
+
+end
